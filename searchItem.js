@@ -3,7 +3,7 @@ function search(arr, s){
     
     for( i = arr.length; i--; )
         for( key in arr[i] )
-            console.log(arr[i][key])
+            console.log(arr[i][key], "key")
             if( arr[i].hasOwnProperty(key) && arr[i][key].indexOf(s) > -1 )
                 matches.push( arr[i] );  // <-- This can be changed to anything
 
@@ -31,3 +31,21 @@ var items = [
     
 var result = search(items, 'lo'); // search "items" for a query value
 console.log(result); // print the result
+
+/*
+Output => 
+"kidder"
+"love"
+"dolor"
+"sym"
+"lorem"
+"ipsum"
+"bar"
+"sit", key
+
+=> [{
+  bar: "love",
+  foo: "kidder"
+}]
+
+*/
