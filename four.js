@@ -22,3 +22,11 @@ for(let i=0; i< x.length;i++){
 }
 
 console.log(acc)
+
+
+var s = "#hallo, this is a test #john #doe";
+var re = /(?:^|\W)#(\w+)(?!\w)/g, match, matches = [];
+while (match = re.exec(s)) {
+  matches.push(match[1]);
+}
+console.log(matches);
