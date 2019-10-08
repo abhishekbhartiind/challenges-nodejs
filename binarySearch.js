@@ -1,6 +1,5 @@
-function binary(arr, element){
+const binary = (arr, element) => {
     let sorted = arr.sort((a,b) => a -b)
-    console.log(sorted)
     let min = 0;
     let max = sorted.length - 1
     while(min <= max){
@@ -14,7 +13,7 @@ function binary(arr, element){
            min = mid + 1
        }  
     }
-    return -1
+    return - 1
 }
 
 var arr = [22,11,44,33,55,77,66,88,99]
